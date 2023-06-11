@@ -1,20 +1,18 @@
 //GET
-const url = "https://my-json-server.typicode.com/RoDFS-GH/Challenge-One-E-Commerce/producto";
-
 const listaProductos = () =>
-  fetch(`${url}`)
+  fetch("https://my-json-server.typicode.com/RoDFS-GH/Challenge-One-E-Commerce/producto")
     .then((respuesta) => respuesta.json())
     .catch((error) => console.log(error));
 
 const listarUnProducto = (id) => {
-  return fetch(`${url}/${id}`).then((respuesta) => {
+  return fetch(`https://my-json-server.typicode.com/RoDFS-GH/Challenge-One-E-Commerce/producto/${id}`).then((respuesta) => {
     return respuesta.json();
   });
 };
 
 //POST
 const creaProdutos = (name, imageUrl, price) => {
-  return fetch(`${url}`, {
+  return fetch("https://my-json-server.typicode.com/RoDFS-GH/Challenge-One-E-Commerce/producto", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -34,7 +32,7 @@ const creaProdutos = (name, imageUrl, price) => {
 
 // PUT/PATCH
 const alteraProducto = async (id, name, price, description) => {
-  return fetch(`${url}/${id}`, {
+  return fetch(`https://my-json-server.typicode.com/RoDFS-GH/Challenge-One-E-Commerce/producto/${id}`, {
     method: "PATCH",
     headers: {
       "Content-Type": "application/json",
@@ -53,7 +51,7 @@ const alteraProducto = async (id, name, price, description) => {
 
 // DELETE
 const deleteProducto = async (id) => {
-  return await fetch(`${url}/${id}`, {
+  return await fetch(`https://my-json-server.typicode.com/RoDFS-GH/Challenge-One-E-Commerce/producto/${id}`, {
     method: "DELETE",
     headers: {
       "Content-Type": "application/json",
