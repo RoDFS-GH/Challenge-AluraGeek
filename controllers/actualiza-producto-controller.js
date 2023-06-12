@@ -25,8 +25,11 @@ formulario.addEventListener("submit", (evento) => {
     .alteraProducto(
       id,
       inputNombre.value,
+      console.log(inputNombre.value),
       inputPrecio.value,
-      inputDescripcion.value
+      console.log(inputPrecio.value),
+      inputDescripcion.value,
+      console.log(inputDescripcion.value),
     )
     .then(() => {
       window.location.href = "./producto.html";
