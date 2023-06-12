@@ -1,4 +1,4 @@
-import { productoServices } from "./servicios/producto-servicios.js";
+import { productoServices } from "../servicios/producto-servicios";
 import { formatPrice } from "../formatterPrices.js";
 
 const nuevoProducto = (name, price, imageUrl, id) => {
